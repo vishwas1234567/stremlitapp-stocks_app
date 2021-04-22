@@ -96,3 +96,24 @@ st.write("""
 #### Volume Price
 """)
 st.line_chart(Stock_Df_3.Volume)
+
+NVIDIA = "NVDA"
+st.write("""
+### NVIDIA Stock Price
+""")
+
+Stock_Symbol_4 = NVIDIA
+
+Stock_Data_4 = yf.Ticker(Stock_Symbol_4)
+
+Stock_Df_4 = Stock_Data_4.history(period='1d', start=Start, end=End)
+
+
+st.write("""
+#### Closing Price
+""")
+st.line_chart(Stock_Df_4.Close)
+st.write("""
+#### Volume Price
+""")
+st.line_chart(Stock_Df_4.Volume)
