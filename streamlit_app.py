@@ -40,7 +40,7 @@ st.write("""
 
 Stock_Symbol_1 = 'AAPL'
 
-Stock_Data_1 = yf.Ticker(Stock_Symbol)
+Stock_Data_1 = yf.Ticker(Stock_Symbol_1)
 
 Stock_Df_1 = Stock_Data_1.history(period='1d', start=Start, end=End)
 
