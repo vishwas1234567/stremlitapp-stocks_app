@@ -128,9 +128,9 @@ st.write("""
 ### The Goldman Sachs Group, Inc. Stock Price
 """)
 
-GoldmanSAchs = "GS"
+GoldmanSachs = "GS"
 
-Stock_Data_GS = yf.Ticker(Stock_Symbol_GS)
+Stock_Data_GS = yf.Ticker(GoldmanSachs)
 
 Stock_Df_GS = Stock_Data_GS.history(period='1d', start=Start, end=End)
 
