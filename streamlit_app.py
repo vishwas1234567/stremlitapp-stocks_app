@@ -8,8 +8,8 @@ End = "2020-1-1"
 
 
 st.write("""
-# Simple Stock Price App
-Shown are the stock **closing price** and ***volume*** of Google and Apple!
+# Stock price app
+All tech-companies
 """)
 
 
@@ -97,6 +97,7 @@ st.write("""
 """)
 st.line_chart(Stock_Df_3.Volume)
 
+
 NVIDIA = "NVDA"
 st.write("""
 ### NVIDIA Stock Price
@@ -117,3 +118,28 @@ st.write("""
 #### Volume Price
 """)
 st.line_chart(Stock_Df_4.Volume)
+
+st.write("""
+# Stocks of some of fiance companies
+we need to also look for some of them
+""")
+
+st.write("""
+### The Goldman Sachs Group, Inc. Stock Price
+""")
+
+GoldmanSAchs = "GS"
+
+Stock_Data_GS = yf.Ticker(Stock_Symbol_GS)
+
+Stock_Df_GS = Stock_Data_GS.history(period='1d', start=Start, end=End)
+
+
+st.write("""
+#### Closing Price
+""")
+st.line_chart(Stock_Df_GS.Close)
+st.write("""
+#### Volume Price
+""")
+st.line_chart(Stock_Df_GS.Volume)
