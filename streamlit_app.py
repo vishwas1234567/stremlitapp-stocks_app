@@ -143,3 +143,22 @@ st.write("""
 #### Volume Price
 """)
 st.line_chart(Stock_Df_GS.Volume)
+
+st.write("""
+### Tesla, Inc. Stock Price
+""")
+
+tesla = "TSLA"
+Stock_Data_tesla = yf.Ticker(tesla)
+
+Stock_Df_tesla = Stock_Data_tesla.history(period='1d', start=Start, end=End)
+
+
+st.write("""
+#### Closing Price
+""")
+st.line_chart(Stock_Df_tesla.Close)
+st.write("""
+#### Volume Price
+""")
+st.line_chart(Stock_Df_tesla.Volume)
